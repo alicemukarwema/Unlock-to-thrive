@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Opportunities | Unlock to Thrive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Unlock to Thrive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mentors.html">Mentorship</a></li>
+                    <li class="nav-item"><a class="nav-link" href="scholarships.html">Financial Aid</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Discover Your Career Path</h1>
+                    <p class="lead">Explore in-demand careers in Rwanda and find opportunities that match your skills and interests.</p>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <img src="/api/placeholder/400/300" alt="Career Planning" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Career Search Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="card shadow">
+                <div class="card-body p-4">
+                    <h2 class="card-title text-center mb-4">Find Opportunities</h2>
+                    <form class="row g-3">
+                        <div class="col-md-4">
+                            <label for="careerField" class="form-label">Career Field</label>
+                            <select class="form-select" id="careerField">
+                                <option selected value="">All Categories</option>
+                                <option value="technology">Technology</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="finance">Finance</option>
+                                <option value="education">Education</option>
+                                <option value="agriculture">Agriculture</option>
+                                <option value="tourism">Tourism & Hospitality</option>
+                                <option value="construction">Construction</option>
+                                <option value="creative">Creative Arts</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="location" class="form-label">Location</label>
+                            <select class="form-select" id="location">
+                                <option selected value="">All Rwanda</option>
+                                <option value="kigali">Kigali</option>
+                                <option value="northern">Northern Province</option>
+                                <option value="southern">Southern Province</option>
+                                <option value="eastern">Eastern Province</option>
+                                <option value="western">Western Province</option>
+                                <option value="remote">Remote</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="experienceLevel" class="form-label">Experience Level</label>
+                            <select class="form-select" id="experienceLevel">
+                                <option selected value="">All Levels</option>
+                                <option value="entry">Entry Level</option>
+                                <option value="mid">Mid Level</option>
+                                <option value="senior">Senior Level</option>
+                                <option value="internship">Internship</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="keywords" class="form-label">Keywords</label>
+                            <input type="text" class="form-control" id="keywords" placeholder="Search jobs by title, skill, or company">
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary px-4">Search Opportunities</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Careers Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Featured Career Opportunities</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Software Developer</h5>
+                                <span class="badge bg-success">New</span>
+                            </div>
+                            <h6 class="text-muted">TechInnovate Rwanda</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-geo-alt"></i> Kigali</span>
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-briefcase"></i> Full-time</span>
+                                <span class="badge bg-light text-dark"><i class="bi bi-bar-chart"></i> Entry Level</span>
+                            </div>
+                            <p class="card-text">Develop web and mobile applications using modern technologies. Collaborate with design and product teams to implement user-friendly interfaces.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">React</span>
+                                <span class="badge bg-secondary">Node.js</span>
+                                <span class="badge bg-secondary">MongoDB</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+                        </div>
+                        <div class="card-footer text-muted small">
+                            Posted 2 days ago • 8 applicants
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Healthcare Administrator</h5>
+                                <span class="badge bg-info">Featured</span>
+                            </div>
+                            <h6 class="text-muted">Rwanda Medical Center</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-geo-alt"></i> Kigali</span>
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-briefcase"></i> Full-time</span>
+                                <span class="badge bg-light text-dark"><i class="bi bi-bar-chart"></i> Mid Level</span>
+                            </div>
+                            <p class="card-text">Oversee daily operations of medical facility departments. Coordinate health services, manage staff, and ensure regulatory compliance.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge bg-secondary">Healthcare Management</span>
+                                <span class="badge bg-secondary">Administration</span>
+                                <span class="badge bg-secondary">Leadership</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+                        </div>
+                        <div class="card-footer text-muted small">
+                            Posted 5 days ago • 12 applicants
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Agricultural Technician</h5>
+                                <span class="badge bg-success">New</span>
+                            </div>
+                            <h6 class="text-muted">Green Harvest Rwanda</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-geo-alt"></i> Eastern Province</span>
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-briefcase"></i> Full-time</span>
+                                <span class="badge bg-light text-dark"><i class="bi bi-bar-chart"></i> Entry Level</span>
+                            </div>
+                            <p class="card-text">Support farmers with modern agricultural techniques. Conduct soil testing, provide technical guidance, and help implement sustainable farming practices.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge bg-secondary">Agriculture</span>
+                                <span class="badge bg-secondary">Soil Science</span>
+                                <span class="badge bg-secondary">Sustainability</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+                        </div>
+                        <div class="card-footer text-muted small">
+                            Posted 1 week ago • 15 applicants
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Marketing Coordinator</h5>
+                            </div>
+                            <h6 class="text-muted">RwandaGrow Enterprises</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-geo-alt"></i> Kigali</span>
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-briefcase"></i> Full-time</span>
+                                <span class="badge bg-light text-dark"><i class="bi bi-bar-chart"></i> Entry Level</span>
+                            </div>
+                            <p class="card-text">Develop and implement marketing campaigns. Create content for social media, coordinate events, and analyze marketing performance metrics.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge bg-secondary">Digital Marketing</span>
+                                <span class="badge bg-secondary">Social Media</span>
+                                <span class="badge bg-secondary">Content Creation</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+                        </div>
+                        <div class="card-footer text-muted small">
+                            Posted 2 weeks ago • 20 applicants
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Finance Analyst</h5>
+                                <span class="badge bg-info">Featured</span>
+                            </div>
+                            <h6 class="text-muted">Rwanda Investment Group</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-geo-alt"></i> Kigali</span>
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-briefcase"></i> Full-time</span>
+                                <span class="badge bg-light text-dark"><i class="bi bi-bar-chart"></i> Mid Level</span>
+                            </div>
+                            <p class="card-text">Analyze financial data and prepare reports. Develop financial models, assist with budgeting, and identify trends to support business decisions.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge bg-secondary">Financial Analysis</span>
+                                <span class="badge bg-secondary">Excel</span>
+                                <span class="badge bg-secondary">Budgeting</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+                        </div>
+                        <div class="card-footer text-muted small">
+                            Posted 3 weeks ago • 16 applicants
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Tourism Guide</h5>
+                            </div>
+                            <h6 class="text-muted">Discover Rwanda Tours</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-geo-alt"></i> Various Locations</span>
+                                <span class="badge bg-light text-dark me-2"><i class="bi bi-briefcase"></i> Full-time</span>
+                                <span class="badge bg-light text-dark"><i class="bi bi-bar-chart"></i> Entry Level</span>
+                            </div>
+                            <p class="card-text">Lead tourist groups through Rwanda's attractions. Share cultural and historical knowledge, ensure safety, and provide excellent customer service.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                <span class="badge bg-secondary">Tourism</span>
+                                <span class="badge bg-secondary">Languages</span>
+                                <span class="badge bg-secondary">Customer Service</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary w-100">View Details</a>
+                        </div>
+                        <div class="card-footer text-muted small">
+                            Posted 3 weeks ago • 9 applicants
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary px-4">View All Opportunities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Resources Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Career Development Resources</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-file-earmark-text text-primary me-2"></i> Resume Building</h5>
+                            <p class="card-text">Learn how to create a professional resume that highlights your skills and experiences effectively.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Access Resources</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-chat-dots text-primary me-2"></i> Interview Preparation</h5>
+                            <p class="card-text">Practice common interview questions and learn techniques to make a great impression.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Access Resources></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Unlock to Thrive</h5>
+                    <p>Empowering Rwandan students through education and career development.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="careers.html" class="text-white">Careers</a></li>
+                        <li><a href="skills.html" class="text-white">Skills Development</a></li>
+                        <li><a href="mentors.html" class="text-white">Mentorship</a></li>
+                        <li><a href="scholarships.html" class="text-white">Financial Aid</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Us</h5>
+                    <address>
+                        <p>Kigali, Rwanda</p>
+                        <p>Email: info@unlocktothrive.rw</p>
+                        <p>Phone: +250 783 885 444</p>
+                    </address>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Unlock to Thrive. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
