@@ -54,7 +54,7 @@ const HomePage = () => {
       },
     {
       id: 3,
-      title: 'Leadership for Women in Business',
+      title: 'Enterprenuer Leardership',
       category: 'Business',
       image:image3
     }
