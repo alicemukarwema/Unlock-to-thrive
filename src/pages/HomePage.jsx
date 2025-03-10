@@ -8,7 +8,10 @@ import MentorCard from '../components/MentorCard';
 import TestimonialCard from '../components/TestimonialCard';
 import image1 from "../assets/pexels-goumbik-574077.jpg";
 import image2 from "../assets/business.jpg";
-import image3 from "../assets/pexels-mikhail-nilov-6930542.jpg"
+import image3 from "../assets/pexels-mikhail-nilov-6930542.jpg";
+import image4 from "../assets/1733282555445.jpeg";
+import image5 from "../assets/lisa.jpeg";
+
 const HomePage = () => {
   
   const features = [
@@ -37,7 +40,7 @@ const HomePage = () => {
   const featuredCareer = [
     {
       id: 1,
-      title: 'Introduction to Web Development',
+      title: 'Developer',
        category: 'Technology',
        image:image1
    
@@ -46,7 +49,7 @@ const HomePage = () => {
     },
     {
       id: 2,
-      title: 'Digital Marketing Essentials',
+      title: 'Digital marketer',
       category: 'Marketing',
 
       image:image2
@@ -54,7 +57,7 @@ const HomePage = () => {
       },
     {
       id: 3,
-      title: 'Enterprenuer Leardership',
+      title: 'Enterprenuer',
       category: 'Business',
       image:image3
     }
@@ -67,7 +70,8 @@ const HomePage = () => {
       title: 'Senior Software Engineer',
       company: 'Tech Innovations Inc.',
       expertise: ['Computer Science', 'AI', 'Career Development'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image4
     },
     {
       id: 2,
@@ -75,7 +79,8 @@ const HomePage = () => {
       title: 'Marketing Director',
       company: 'Global Brands Agency',
       expertise: ['Digital Marketing', 'Branding', 'Content Strategy'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image5
     }
   ];
   
@@ -173,7 +178,7 @@ const HomePage = () => {
       </section>
       
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Success Stories</h2>
@@ -192,7 +197,7 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* CTA Section */}
       <section className="py-16 bg-purple-600 text-white">

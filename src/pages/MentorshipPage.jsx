@@ -2,7 +2,14 @@ import React, { useState } from 'react';
 import { Input, Select, Button, Pagination, Tabs } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import MentorCard from '../components/MentorCard';
-
+import image1 from "../assets/1733282555445.jpeg";
+import image2 from "../assets/lisa.jpeg";
+import image3 from "../assets/sarah.jpeg";
+import image4 from "../assets/jessica.jpeg";
+import image5 from "../assets/miranda.jpeg";
+import image6 from "../assets/emma.jpeg";
+import image7 from "../assets/lopez.jpeg";
+import image8 from "../assets/REbecca.jpeg";
 const { Option } = Select;
 const { TabPane } = Tabs;
 
@@ -24,7 +31,9 @@ const MentorshipPage = () => {
       company: 'Tech Innovations Inc.',
       industry: 'Technology',
       expertise: ['Technical Skills', 'Career Development'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image1
+
     },
     {
       id: 2,
@@ -33,7 +42,8 @@ const MentorshipPage = () => {
       company: 'Global Brands Agency',
       industry: 'Marketing',
       expertise: ['Leadership', 'Career Development'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image2
     },
     {
       id: 3,
@@ -42,7 +52,9 @@ const MentorshipPage = () => {
       company: 'City General Hospital',
       industry: 'Healthcare',
       expertise: ['Leadership', 'Work-Life Balance'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image3
+
     },
     {
       id: 4,
@@ -51,7 +63,8 @@ const MentorshipPage = () => {
       company: 'EduTech Solutions',
       industry: 'Education',
       expertise: ['Entrepreneurship', 'Leadership'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image4
     },
     {
       id: 5,
@@ -60,7 +73,8 @@ const MentorshipPage = () => {
       company: 'Global Financial Group',
       industry: 'Finance',
       expertise: ['Career Development', 'Technical Skills'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image5
     },
     {
       id: 6,
@@ -69,7 +83,8 @@ const MentorshipPage = () => {
       company: 'InnovateTech',
       industry: 'Technology',
       expertise: ['Technical Skills', 'Leadership'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image6
     },
     {
       id: 7,
@@ -78,7 +93,8 @@ const MentorshipPage = () => {
       company: 'Talent Solutions Corp',
       industry: 'Business',
       expertise: ['Career Development', 'Work-Life Balance'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image7
     },
     {
       id: 8,
@@ -87,7 +103,8 @@ const MentorshipPage = () => {
       company: 'State University',
       industry: 'Education',
       expertise: ['Career Development', 'Leadership'],
-      linkedIn: '#'
+      linkedIn: '#',
+      image:image8
     }
   ];
   

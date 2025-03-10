@@ -27,7 +27,7 @@ const CareerPage = () => {
   const Career = [
     {
       id: 1,
-      title: 'Introduction to Web Development',
+      title: 'Developer',
       category: 'Technology',
       level: 'Beginner',
       image:image1
@@ -37,7 +37,7 @@ const CareerPage = () => {
     },
     {
       id: 2,
-      title: 'Digital Marketing Essentials',
+      title: 'Digital marketer',
       category: 'Marketing',
       level: 'Beginner',
       image:image2
@@ -46,7 +46,7 @@ const CareerPage = () => {
     },
     {
       id: 3,
-      title: 'Enterprenuer Leardership',
+      title: 'Enterprenuer',
       category: 'Business',
       level: 'Intermediate',
       image:image3
@@ -55,7 +55,7 @@ const CareerPage = () => {
     },
     {
       id: 4,
-      title: 'User Experience Design Fundamentals',
+      title: 'UI/UX Designer',
       category: 'Design',
       level: 'Beginner',
       image:image4
@@ -64,7 +64,7 @@ const CareerPage = () => {
     },
     {
       id: 5,
-      title: 'Advanced Data Science for Business',
+      title: 'Data Scientist',
       category: 'Technology',
       level: 'Advanced',
       image:image5
@@ -73,7 +73,7 @@ const CareerPage = () => {
     },
     {
       id: 6,
-      title: 'Financial Literacy for Entrepreneurs',
+      title: 'Accontants',
       category: 'Business',
       level: 'Intermediate',
       image:image6
@@ -82,7 +82,7 @@ const CareerPage = () => {
     },
     {
       id: 7,
-      title: 'Public Speaking and Communication',
+      title: 'Communication Researcher',
       category: 'Personal Development',
       level: 'Beginner',
       image:image7
@@ -90,7 +90,7 @@ const CareerPage = () => {
     },
     {
       id: 8,
-      title: 'Social Media Marketing Strategy',
+      title: 'Social Media manager',
       category: 'Marketing',
       level: 'Intermediate',
       image:image8
@@ -99,7 +99,7 @@ const CareerPage = () => {
     },
     {
       id: 9,
-      title: 'Mobile App Development with React Native',
+      title: 'Mobile app developer',
       category: 'Technology',
       level: 'Advanced',
       image:image9
