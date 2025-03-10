@@ -46,7 +46,7 @@ const CareerPage = () => {
     },
     {
       id: 3,
-      title: 'Leadership for Women in Business',
+      title: 'Enterprenuer Leardership',
       category: 'Business',
       level: 'Intermediate',
       image:image3
