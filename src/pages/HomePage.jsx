@@ -6,8 +6,8 @@ import FeatureCard from '../components/FeatureCard';
 import CourseCard from '../components/CourseCard';
 import MentorCard from '../components/MentorCard';
 import TestimonialCard from '../components/TestimonialCard';
-import image1 from "../assets/pexels-mikhail-nilov-6930542.jpg"
-
+import image1 from "../assets/pexels-goumbik-574077.jpg";
+import image2 from "../assets/business.jpg";
 import image3 from "../assets/pexels-mikhail-nilov-6930542.jpg"
 const HomePage = () => {
   
@@ -30,7 +30,7 @@ const HomePage = () => {
     {
       icon: <DollarOutlined />,
       title: 'Financial Aid',
-      description: 'Apply for scholarships and financial assistance to support your educational journey.'
+      description: 'Discover the scholarships and fundings opportunities available to help you pursue your education.'
     }
   ];
   
@@ -38,31 +38,24 @@ const HomePage = () => {
     {
       id: 1,
       title: 'Introduction to Web Development',
-      instructor: 'Sarah Johnson',
-      category: 'Technology',
-      rating: 4.8,
-      duration: '8 weeks',
-      price: 0,
-      image:image1
+       category: 'Technology',
+       image:image1
+   
+     
+    
     },
     {
       id: 2,
       title: 'Digital Marketing Essentials',
-      instructor: 'Emma Williams',
       category: 'Marketing',
-      rating: 4.6,
-      duration: '6 weeks',
-      price: 49000,
-      image:image1
-    },
+
+      image:image2
+     
+      },
     {
       id: 3,
       title: 'Leadership for Women in Business',
-      instructor: 'Dr. Michelle Carter',
       category: 'Business',
-      rating: 4.9,
-      duration: '4 weeks',
-      price: 79000,
       image:image3
     }
   ];
@@ -113,7 +106,7 @@ const HomePage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">How We Help You Thrive</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive platform provides everything you need to develop skills, connect with mentors, and advance your career.
+              Our comprehensive platform provides everything you need to develop skills, connect with mentors, and explore careers.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -185,7 +178,7 @@ const HomePage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Success Stories</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Hear from women who have transformed their lives through our platform.
+              Hear from alumin who have transformed their lives through our platform.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -206,7 +199,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Start Your Journey?</h2>
           <p className="text-purple-100 max-w-2xl mx-auto mb-8">
-            Join thousands of women who are building skills, connecting with mentors, and advancing their careers.
+            Join thousands of students who are building skills, connecting with mentors, and advancing their careers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

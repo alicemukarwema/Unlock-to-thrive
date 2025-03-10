@@ -6,7 +6,7 @@ const Navbar = ({ mobile = false }) => {
   
   const navLinks = [
     { title: 'Home', path: '/' },
-    { title: 'About', path: '/about' },
+    // { title: 'About', path: '/about' },
     { title: 'Career', path: '/career' },
     { title: 'Mentorship', path: '/mentorship' },
     { title: 'Resources', path: '/resources' },

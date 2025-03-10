@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ClockCircleOutlined, UserOutlined, StarFilled } from '@ant-design/icons';
 
 const CourseCard = ({ course }) => {
-  const { id, title, instructor, category, rating, duration, image} = course;
+  const { id, title, category, image} = course;
   
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100">
@@ -19,19 +19,19 @@ const CourseCard = ({ course }) => {
           <span className="px-2 py-1 bg-purple-100 text-purple-600 text-xs rounded-full">
             {category}
           </span>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <StarFilled className="text-yellow-400 mr-1" />
             <span className="text-sm font-medium">{rating}/5</span>
-          </div>
+          </div> */}
         </div>
         <h3 className="text-lg font-semibold mb-2 text-gray-800">{title}</h3>
-        <div className="flex items-center text-gray-500 text-sm mb-3">
+        {/* <div className="flex items-center text-gray-500 text-sm mb-3">
           <ClockCircleOutlined className="mr-1" />
           <span>{duration}</span>
           <span className="mx-2">•</span>
           <UserOutlined className="mr-1" />
           <span>{instructor}</span>
-        </div>
+        </div>  */}
         <div className="flex justify-between items-center mt-4">
         
           <Link 

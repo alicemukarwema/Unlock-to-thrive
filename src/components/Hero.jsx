@@ -10,7 +10,7 @@ const Hero = () => {
             Unlock Your Potential, <span className="text-purple-600">Thrive</span> in Your Future
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            Empowering women through equitable access to quality education, skill-based training, and holistic mentoring.
+            Bridging the gap between education and career readiness for Rwandan Students.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 

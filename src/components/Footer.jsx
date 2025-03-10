@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-purple-700 mb-4">Unlock to Thrive</h3>
             <p className="text-gray-600 mb-4">
-              Empowering women through education, skill-based training, and mentorship.
+              Bridging the gap between education and career readiness for Rwandan students.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-gray-500 hover:text-purple-600">
@@ -37,7 +37,7 @@ const Footer = () => {
             <h4 className="font-semibold text-gray-800 mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link to="/" className="text-gray-600 hover:text-purple-600">Home</Link></li>
-              <li><Link to="/about" className="text-gray-600 hover:text-purple-600">About Us</Link></li>
+              {/* <li><Link to="/about" className="text-gray-600 hover:text-purple-600">About Us</Link></li> */}
               <li><Link to="/career" className="text-gray-600 hover:text-purple-600">career</Link></li>
               <li><Link to="/mentorship" className="text-gray-600 hover:text-purple-600">Mentorship</Link></li>
               <li><Link to="/resources" className="text-gray-600 hover:text-purple-600">Resources</Link></li>
@@ -56,9 +56,9 @@ const Footer = () => {
           
           <div>
             <h4 className="font-semibold text-gray-800 mb-4">Contact</h4>
-            <p className="text-gray-600 mb-2">contact@unlocktothrive.org</p>
-            <p className="text-gray-600 mb-2">+1 (555) 123-4567</p>
-            <p className="text-gray-600">123 Education Street, City, Country</p>
+            <p className="text-gray-600 mb-2">mukarwemaalice@gmail.com</p>
+            <p className="text-gray-600 mb-2">+250 783 885 444</p>
+            {/* <p className="text-gray-600">123 Education Street, City, Country</p> */}
           </div>
         </div>
         

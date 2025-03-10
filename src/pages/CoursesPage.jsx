@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 import { Input, Select, Button, Pagination } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import CourseCard from '../components/CourseCard';
+import image1 from "../assets/pexels-goumbik-574077.jpg";
+import image2 from "../assets/business.jpg";
+import image3 from "../assets/pexels-mikhail-nilov-6930542.jpg";
+import image4 from "../assets/UI design.jpg";
+import image5 from "../assets/data science.jpg";
+import image6 from "../assets/financial literacy.jpg";
+import image7 from "../assets/public speaking skills.jpg";
+import image8 from "../assets/social media marketing.jpg";
+import image9 from "../assets/mobile app.jpg"
 
 const { Option } = Select;
 
@@ -19,92 +28,83 @@ const CareerPage = () => {
     {
       id: 1,
       title: 'Introduction to Web Development',
-      instructor: 'Sarah Johnson',
       category: 'Technology',
       level: 'Beginner',
-      rating: 4.8,
-      duration: '8 weeks',
-      price: 0
+      image:image1
+    
+     
+      
     },
     {
       id: 2,
       title: 'Digital Marketing Essentials',
-      instructor: 'Emma Williams',
       category: 'Marketing',
       level: 'Beginner',
-      rating: 4.6,
-      duration: '6 weeks',
-      price: 49
+      image:image2
+     
+   
     },
     {
       id: 3,
       title: 'Leadership for Women in Business',
-      instructor: 'Dr. Michelle Carter',
       category: 'Business',
       level: 'Intermediate',
-      rating: 4.9,
-      duration: '4 weeks',
-      price: 79
+      image:image3
+      
+      
     },
     {
       id: 4,
       title: 'User Experience Design Fundamentals',
-      instructor: 'Alex Rodriguez',
       category: 'Design',
       level: 'Beginner',
-      rating: 4.7,
-      duration: '5 weeks',
-      price: 59
+      image:image4
+     
+   
     },
     {
       id: 5,
       title: 'Advanced Data Science for Business',
-      instructor: 'Dr. James Wilson',
       category: 'Technology',
       level: 'Advanced',
-      rating: 4.8,
-      duration: '10 weeks',
-      price: 99
+      image:image5
+    
+     
     },
     {
       id: 6,
       title: 'Financial Literacy for Entrepreneurs',
-      instructor: 'Maria Garcia',
       category: 'Business',
       level: 'Intermediate',
-      rating: 4.5,
-      duration: '6 weeks',
-      price: 69
+      image:image6
+      
+     
     },
     {
       id: 7,
       title: 'Public Speaking and Communication',
-      instructor: 'Jennifer Lee',
       category: 'Personal Development',
       level: 'Beginner',
-      rating: 4.9,
-      duration: '4 weeks',
-      price: 39
+      image:image7
+     
     },
     {
       id: 8,
       title: 'Social Media Marketing Strategy',
-      instructor: 'Robert Brown',
       category: 'Marketing',
       level: 'Intermediate',
-      rating: 4.7,
-      duration: '7 weeks',
-      price: 59
+      image:image8
+     
+     
     },
     {
       id: 9,
       title: 'Mobile App Development with React Native',
-      instructor: 'David Kim',
       category: 'Technology',
       level: 'Advanced',
-      rating: 4.6,
-      duration: '12 weeks',
-      price: 89
+      image:image9
+    
+      
     }
   ];
   
@@ -134,7 +134,7 @@ const CareerPage = () => {
     <div className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">Explore Our Career</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">Explore Your Career</h1>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Discover a wide range of Career designed to help you develop in-demand skills and advance your career.
           </p>
