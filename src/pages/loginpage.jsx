@@ -1,22 +1,56 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Form, Input, Button, Checkbox, Card, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import axios from 'axios';
 
 const LoginPage = ({ onLogin }) => {
   const [form] = Form.useForm();
-
-  const handleSubmit = (values) => {
+  const navigate = useNavigate();
+  
+  const handleSubmit = async (values) => {
     try {
-      const success = onLogin(values);
-      if (success) {
+      console.log("Submitting login request with:", values);
+
+      const response = await axios.post('http://localhost:5000/api/signin', values);
+      
+      if (response.status === 200) {
+        const { token, user } = response.data;
+        const accountType = user.accountType;
+
         message.success('Login successful!');
+
+        // Debugging logs
+        console.log("Token received:", token);
+        console.log("User data:", user);
+        console.log("Account type:", accountType);
+
+        // Store token in localStorage
+        localStorage.setItem('token', token); 
+
+        // Store user info including accountType
+        localStorage.setItem('user', JSON.stringify(user));
+
+        if (onLogin) {
+          onLogin(user);
+        } else {
+          console.error("onLogin function is not provided!");
+        }
+
+        // Redirect based on account type
+        if (accountType === "mentor") {
+          navigate('/dashboard/mentor');
+        } else if (accountType === "student") {
+          navigate('/dashboard/student');
+        } else {
+          navigate('/dashboard/student'); 
+        }
       } else {
-        message.error('Login failed. Please check your credentials.');
+        message.error(response.data.message || 'Login failed. Please check your credentials.');
       }
     } catch (error) {
-      message.error('An error occurred during login.');
+      console.error("Login error:", error);
+      message.error(error.response?.data?.message || 'An error occurred during login.');
     }
   };
 
@@ -77,7 +111,7 @@ const LoginPage = ({ onLogin }) => {
                   <Checkbox>Remember me</Checkbox>
                 </Form.Item>
 
-                <a className="font-medium text-indigo-600 hover:text-indigo-500" href="#">
+                <a className="font-medium text-indigo-600 hover:text-indigo-500" href="/request-reset-password">
                   Forgot your password?
                 </a>
               </div>
@@ -85,11 +119,9 @@ const LoginPage = ({ onLogin }) => {
 
             <Form.Item>
               <Button 
-                type="primary" 
                 htmlType="submit" 
                 size="large"
-                className="w-full bg-purple-600 hover:bg-purple-700 border-purple-600"
-                
+                className="w-full text-white font-bold bg-purple-600 hover:bg-purple-700 border-purple-600"
               >
                 Log in
               </Button>

@@ -11,22 +11,26 @@ const SignupPage = ({ onSignup }) => {
   const [form] = Form.useForm();
   const [accountType, setAccountType] = useState('student');
   const [showMentorInfo, setShowMentorInfo] = useState(false);
-
-  const handleSubmit = (values) => {
-    const userData = {
-      ...values,
-      accountType
-    };
-
+  const handleSubmit = async (values) => {
     try {
-      const success = onSignup(userData);
-      if (success) {
-        message.success('Account created successfully!');
+      const response = await fetch("http://localhost:5000/api/register", { // Adjust the backend URL if needed
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...values, accountType }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        message.success("Account created successfully!");
+        form.resetFields();
       } else {
-        message.error('Failed to create account. Please try again.');
+        message.error(data.message || "Failed to create account.");
       }
     } catch (error) {
-      message.error('An error occurred during signup.');
+      message.error("An error occurred during signup.");
     }
   };
 
