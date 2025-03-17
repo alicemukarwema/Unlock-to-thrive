@@ -24,7 +24,7 @@ const MentorDashboardHome = () => {
         if (!token) return;
 
         // Replace this with actual API call in production
-        // const response = await axios.get("http://localhost:5000/api/mentor/dashboard", {
+        // const response = await axios.get("https://unlock-to-thrive-backend.onrender.com/api/mentor/dashboard", {
         //   headers: { Authorization: `Bearer ${token}` },
         // });
         // setDashboardData(response.data);
