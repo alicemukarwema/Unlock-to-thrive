@@ -153,7 +153,7 @@ const ResourcesPage = () => {
         <h3>{item.title}</h3>
         <p>By {item.author} | {item.date} | {item.readTime}</p>
         <div style={{ marginBottom: '10px' }}>
-          <Tag color="blue">{item.category}</Tag>
+          <Tag color="purple">{item.category}</Tag>
           {item.tags.map(tag => (
             <Tag key={tag} color="cyan">{tag}</Tag>
           ))}
@@ -184,7 +184,7 @@ const ResourcesPage = () => {
         <h3>{item.title}</h3>
         <p>{item.type} | {item.size}</p>
         <div style={{ marginBottom: '10px' }}>
-          <Tag color="green">{item.category}</Tag>
+          <Tag color="purple">{item.category}</Tag>
         </div>
         <Button type="primary" icon={<DownloadOutlined />}>Download</Button>
       </Card>
@@ -198,7 +198,7 @@ const ResourcesPage = () => {
         <h3>{item.title}</h3>
         <p>{item.description}</p>
         <div style={{ marginBottom: '10px' }}>
-          <Tag color="orange">{item.category}</Tag>
+          <Tag color="purple">{item.category}</Tag>
         </div>
         <Button type="primary" icon={<LinkOutlined />} href={item.url} target="_blank">Visit Website</Button>
       </Card>
