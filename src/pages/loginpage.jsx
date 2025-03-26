@@ -112,9 +112,9 @@ const LoginPage = ({ onLogin }) => {
                   <Checkbox>Remember me</Checkbox>
                 </Form.Item>
 
-                <a className="font-medium text-indigo-600 hover:text-indigo-500" href="/request-reset-password">
+                < Link className="font-medium text-indigo-600 hover:text-indigo-500" to="/request-reset-password">
                   Forgot your password?
-                </a>
+                </Link>
               </div>
             </Form.Item>
 

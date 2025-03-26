@@ -149,7 +149,7 @@ const SignupPage = ({ onSignup }) => {
         ]}
       >
         <Checkbox>
-          I agree to the <a href="#" className="text-indigo-600">Terms of Service</a> and <a href="#" className="text-indigo-600">Privacy Policy</a>
+          I agree to the <Link to="#" className="text-indigo-600">Terms of Service</Link> and <Link to="#" className="text-indigo-600">Privacy Policy</Link>
         </Checkbox>
       </Form.Item>
       
@@ -314,7 +314,7 @@ const SignupPage = ({ onSignup }) => {
         ]}
       >
         <Checkbox onChange={(e) => toggleMentorInfo(e.target.checked)}>
-          I agree to the <a href="#" className="text-indigo-600">Terms of Service</a> and <a href="#" className="text-indigo-600">Privacy Policy</a>
+          I agree to the <Link  to="#" className="text-indigo-600">Terms of Service</Link> and <Link to="#" className="text-indigo-600">Privacy Policy</Link>
         </Checkbox>
       </Form.Item>
       

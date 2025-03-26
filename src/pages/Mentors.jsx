@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Layout, Typography, Input, Button, Tag, Card, Avatar, Rate, Tabs, List, Badge, Space, Divider, Row, Col, Grid } from "antd";
 import { SearchOutlined, FilterOutlined, BookOutlined, MessageOutlined, StarFilled, EnvironmentOutlined, ClockCircleOutlined, CalendarOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const { Header, Content, Footer } = Layout;
 const { Title, Text, Paragraph } = Typography;
@@ -130,13 +131,13 @@ const Mentors = () => {
     <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
         <div className="logo">
-          <a href="/" style={{ fontSize: '18px', fontWeight: 'bold' }}>MentorMatch</a>
+          <Link  to="/" style={{ fontSize: '18px', fontWeight: 'bold' }}>MentorMatch</a>
         </div>
         <div className="menu">
           <Space size={20}>
-            <a href="/">Home</a>
-            <a href="/mentors" style={{ color: '#1890ff' }}>Mentors</a>
-            <a href="/how-it-works">How it Works</a>
+            <Link to="/">Home</Link>
+            <Link to="/mentors" style={{ color: '#1890ff' }}>Mentors</Link>
+            <Link to="/how-it-works">How it Works</Link >
             <Button type="primary">Sign In</Button>
           </Space>
         </div>

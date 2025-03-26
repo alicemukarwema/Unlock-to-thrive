@@ -18,18 +18,18 @@ const Footer = () => {
               Bridging the gap between education and career readiness for Rwandan students.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-500 hover:text-purple-600">
+              <Link to="#" className="text-gray-500 hover:text-purple-600">
                 <FacebookOutlined style={{ fontSize: '20px' }} />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-purple-600">
+              </Link>
+              <Link to="#" className="text-gray-500 hover:text-purple-600">
                 <TwitterOutlined style={{ fontSize: '20px' }} />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-purple-600">
+              </Link>
+              <Link to="#" className="text-gray-500 hover:text-purple-600">
                 <InstagramOutlined style={{ fontSize: '20px' }} />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-purple-600">
+              </Link>
+              <Link to="#" className="text-gray-500 hover:text-purple-600">
                 <LinkedinOutlined style={{ fontSize: '20px' }} />
-              </a>
+              </Link>
             </div>
           </div>
           
