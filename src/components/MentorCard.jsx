@@ -50,7 +50,7 @@ const MentorList = () => {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/mentors'); 
+        const response = await axios.get('https://unlock-to-thrive-backend.onrender.com/api/mentors'); 
         
         // Ensure we correctly extract "data" from API response
         if (response.data && response.data.data) {

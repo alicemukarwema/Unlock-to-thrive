@@ -13,7 +13,7 @@ const SignupPage = ({ onSignup }) => {
   const [showMentorInfo, setShowMentorInfo] = useState(false);
   const handleSubmit = async (values) => {
     try {
-      const response = await fetch("http://localhost:5000/api/register", { // Adjust the backend URL if needed
+      const response = await fetch("https://unlock-to-thrive-backend.onrender.com/api/register", { // Adjust the backend URL if needed
         method: "POST",
         headers: {
           "Content-Type": "application/json",

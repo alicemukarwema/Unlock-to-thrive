@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Table, Tag, Button, message, Select, Space } from 'antd';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://unlock-to-thrive-backend.onrender.com/api';
 
 // Create an axios instance with base configuration
 const api = axios.create({
