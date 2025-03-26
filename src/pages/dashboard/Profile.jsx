@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaUser, FaEdit, FaTrash, FaKey, FaSignOutAlt } from 'react-icons/fa';
 
-const API_BASE_URL = 'https://unlock-to-thrive-backend.onrender.com/api';
+const API_BASE_URL = 'http://localhost:5000/api';
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -22,7 +22,7 @@ const Profile = () => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`${API_BASE_URL}/profile`, {
+        const response = await axios.get(`${API_BASE_URL}/students/profile`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         

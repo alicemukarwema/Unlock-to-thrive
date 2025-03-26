@@ -1,130 +1,38 @@
 import React, { useState } from 'react';
 import { Input, Select, Button, Pagination, Tabs } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
-import MentorCard from '../components/MentorCard';
-import image1 from "../assets/1733282555445.jpeg";
-import image2 from "../assets/lisa.jpeg";
-import image3 from "../assets/sarah.jpeg";
-import image4 from "../assets/jessica.jpeg";
-import image5 from "../assets/miranda.jpeg";
-import image6 from "../assets/emma.jpeg";
-import image7 from "../assets/lopez.jpeg";
-import image8 from "../assets/REbecca.jpeg";
+import MentorList from '../components/MentorCard';  // Import the new MentorList component
+
 const { Option } = Select;
 const { TabPane } = Tabs;
+
+// Sample data - in a real app, these would come from a backend or configuration file
+const industries = [
+  'Technology', 
+  'Finance', 
+  'Healthcare', 
+  'Marketing', 
+  'Education', 
+  'Consulting', 
+  'Entrepreneurship'
+];
+
+const expertiseAreas = [
+  'Leadership', 
+  'Career Development', 
+  'Technical Skills', 
+  'Networking', 
+  'Product Management', 
+  'Entrepreneurship', 
+  'Design', 
+  'Data Science'
+];
 
 const MentorshipPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [industryFilter, setIndustryFilter] = useState('all');
   const [expertiseFilter, setExpertiseFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
-  
-  // Sample data
-  const industries = ['Technology', 'Business', 'Marketing', 'Healthcare', 'Education', 'Finance'];
-  const expertiseAreas = ['Career Development', 'Leadership', 'Technical Skills', 'Entrepreneurship', 'Work-Life Balance'];
-  
-  const mentors = [
-    {
-      id: 1,
-      name: 'Dr. Maya Patel',
-      title: 'Senior Software Engineer',
-      company: 'Tech Innovations Inc.',
-      industry: 'Technology',
-      expertise: ['Technical Skills', 'Career Development'],
-      linkedIn: '#',
-      image:image1
-
-    },
-    {
-      id: 2,
-      name: 'Lisa Thompson',
-      title: 'Marketing Director',
-      company: 'Global Brands Agency',
-      industry: 'Marketing',
-      expertise: ['Leadership', 'Career Development'],
-      linkedIn: '#',
-      image:image2
-    },
-    {
-      id: 3,
-      name: 'Dr. Sarah Johnson',
-      title: 'Chief Medical Officer',
-      company: 'City General Hospital',
-      industry: 'Healthcare',
-      expertise: ['Leadership', 'Work-Life Balance'],
-      linkedIn: '#',
-      image:image3
-
-    },
-    {
-      id: 4,
-      name: 'Jessica Williams',
-      title: 'Founder & CEO',
-      company: 'EduTech Solutions',
-      industry: 'Education',
-      expertise: ['Entrepreneurship', 'Leadership'],
-      linkedIn: '#',
-      image:image4
-    },
-    {
-      id: 5,
-      name: 'Michelle Rodriguez',
-      title: 'Investment Banker',
-      company: 'Global Financial Group',
-      industry: 'Finance',
-      expertise: ['Career Development', 'Technical Skills'],
-      linkedIn: '#',
-      image:image5
-    },
-    {
-      id: 6,
-      name: 'Emma Davis',
-      title: 'Product Manager',
-      company: 'InnovateTech',
-      industry: 'Technology',
-      expertise: ['Technical Skills', 'Leadership'],
-      linkedIn: '#',
-      image:image6
-    },
-    {
-      id: 7,
-      name: 'Jennifer Lopez',
-      title: 'HR Director',
-      company: 'Talent Solutions Corp',
-      industry: 'Business',
-      expertise: ['Career Development', 'Work-Life Balance'],
-      linkedIn: '#',
-      image:image7
-    },
-    {
-      id: 8,
-      name: 'Rebecca Taylor',
-      title: 'Senior Professor',
-      company: 'State University',
-      industry: 'Education',
-      expertise: ['Career Development', 'Leadership'],
-      linkedIn: '#',
-      image:image8
-    }
-  ];
-  
-  // Filter mentors based on search and filters
-  const filteredMentors = mentors.filter(mentor => {
-    const matchesSearch = mentor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         mentor.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         mentor.company.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesIndustry = industryFilter === 'all' || mentor.industry === industryFilter;
-    const matchesExpertise = expertiseFilter === 'all' || mentor.expertise.includes(expertiseFilter);
-    
-    return matchesSearch && matchesIndustry && matchesExpertise;
-  });
-  
-  // Pagination logic
-  const pageSize = 8;
-  const paginatedMentors = filteredMentors.slice(
-    (currentPage - 1) * pageSize,
-    currentPage * pageSize
-  );
   
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -185,42 +93,11 @@ const MentorshipPage = () => {
             </div>
             
             {/* Mentors List */}
-            {paginatedMentors.length > 0 ? (
-              <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                  {paginatedMentors.map((mentor) => (
-                    <MentorCard key={mentor.id} mentor={mentor} />
-                  ))}
-                </div>
-                
-                {/* Pagination */}
-                <div className="flex justify-center mt-8">
-                  <Pagination
-                    current={currentPage}
-                    pageSize={pageSize}
-                    total={filteredMentors.length}
-                    onChange={handlePageChange}
-                    showSizeChanger={false}
-                  />
-                </div>
-              </>
-            ) : (
-              <div className="text-center py-8">
-                <h3 className="text-xl font-medium text-gray-800 mb-2">No mentors found</h3>
-                <p className="text-gray-600">Try adjusting your search or filters</p>
-                <Button 
-                  type="primary" 
-                  onClick={() => {
-                    setSearchTerm('');
-                    setIndustryFilter('all');
-                    setExpertiseFilter('all');
-                  }}
-                  className="mt-4 bg-purple-600 hover:bg-purple-700 border-purple-600"
-                >
-                  Reset Filters
-                </Button>
-              </div>
-            )}
+            <MentorList 
+              searchTerm={searchTerm}
+              industryFilter={industryFilter}
+              expertiseFilter={expertiseFilter}
+            />
           </TabPane>
           
           <TabPane tab="Become a Mentor" key="become">

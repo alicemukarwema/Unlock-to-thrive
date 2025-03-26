@@ -63,43 +63,8 @@ const HomePage = () => {
     }
   ];
   
-  const featuredMentors = [
-    {
-      id: 1,
-      name: 'Dr. Maya Patel',
-      title: 'Senior Software Engineer',
-      company: 'Tech Innovations Inc.',
-      expertise: ['Computer Science', 'AI', 'Career Development'],
-      linkedIn: '#',
-      image:image4
-    },
-    {
-      id: 2,
-      name: 'Lisa Thompson',
-      title: 'Marketing Director',
-      company: 'Global Brands Agency',
-      expertise: ['Digital Marketing', 'Branding', 'Content Strategy'],
-      linkedIn: '#',
-      image:image5
-    }
-  ];
-  
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Sophia Martinez',
-      role: 'Software Developer',
-      rating: 5,
-      content: 'The web development course and mentorship program completely changed my career trajectory. I was able to transition from retail to tech in just 6 months!'
-    },
-    {
-      id: 2,
-      name: 'Aisha Johnson',
-      role: 'Digital Marketing Specialist',
-      rating: 5,
-      content: 'I would not have been able to pursue my education without the financial aid provided. Now I have a thriving career in marketing.'
-    }
-  ];
+
+ 
   
   return (
     <div>
@@ -136,9 +101,9 @@ const HomePage = () => {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredCareer.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
+            
+              <CourseCard />
+          
           </div>
         </div>
       </section>
@@ -157,10 +122,10 @@ const HomePage = () => {
               View All Mentors
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredMentors.map((mentor) => (
-              <MentorCard key={mentor.id} mentor={mentor} />
-            ))}
+          <div className="flex flex-col md:flex-row w-full gap-6">
+           
+              <MentorCard />
+         
             <div className="bg-purple-50 rounded-lg p-6 flex flex-col justify-center items-center text-center">
               <h3 className="text-xl font-semibold text-purple-700 mb-4">Become a Mentor</h3>
               <p className="text-gray-600 mb-6">

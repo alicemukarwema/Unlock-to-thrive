@@ -8,6 +8,7 @@ import MentorDashboardLayout from './layouts/MentorDashboardLayout';
 // Public pages
 import HomePage from './pages/HomePage';
 import CoursesPage from './pages/CoursesPage';
+import StudentDashboard from './pages/dashboard/mentor/Students';
 import MentorshipPage from './pages/MentorshipPage';
 import ResourcesPage from './pages/ResourcesPage';
 import FinancialAidPage from './pages/FinancialAidPage';
@@ -23,6 +24,8 @@ import StudentProfile from './pages/dashboard/Profile';
 // Dashboard pages - Mentor
 import MentorDashboardHome from './pages/dashboard/mentor/DashboardHome';
 import MentorProfile from './pages/dashboard/mentor/Profile';
+import Mentorcarrer from './pages/dashboard/mentor/CareerDashboard';
+import CareerDetail from './pages/CareerDetail.jsx';
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -42,6 +45,7 @@ function App() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/career" element={<CoursesPage />} />
+          <Route path="/career/:id" element={<CareerDetail />} />
           <Route path="/mentorship" element={<MentorshipPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/financial-aid" element={<FinancialAidPage />} />
@@ -61,6 +65,10 @@ function App() {
         <Route path="/dashboard/mentor" element={<MentorDashboardLayout />}>
           <Route index element={<MentorDashboardHome />} />
           <Route path="profile" element={<MentorProfile />} />
+          <Route path="careers" element={<Mentorcarrer />} />
+          <Route path="students" element={<StudentDashboard />} />
+          
+          
         </Route>
       </Routes>
     </Router>

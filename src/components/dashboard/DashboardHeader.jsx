@@ -7,6 +7,7 @@ const DashboardHeader = () => {
   const handleLogout = () => {
     // Clear authentication
     localStorage.removeItem('token');
+    localStorage.removeItem('userId');
     navigate('/login');
   };
 

@@ -67,13 +67,13 @@ const MentorSidebar = () => {
           </NavLink>
           
           <NavLink 
-            to="/dashboard/mentor/sessions" 
+            to="/dashboard/mentor/careers" 
             className={({isActive}) => 
               `flex items-center py-2.5 px-4 rounded transition duration-200 ${isActive ? 'bg-blue-600' : 'hover:bg-gray-700'} mb-1`
             }
           >
             <CalendarOutlined />
-            {!collapsed && <span className="ml-3">Sessions</span>}
+            {!collapsed && <span className="ml-3">careers</span>}
           </NavLink>
           
           <NavLink 
