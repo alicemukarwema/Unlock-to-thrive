@@ -11,7 +11,7 @@ const ResetPassword = () => {
   const handleSubmit = async (values) => {
     setLoading(true);
     try {
-      const response = await axios.post('https://unlock-to-thrive-backend.onrender.com/api/reset-password', { ...values, token });
+      const response = await axios.post('http://localhost:5000/api/reset-password', { ...values, token });
       message.success(response.data.message);
       navigate('/login');
     } catch (error) {
