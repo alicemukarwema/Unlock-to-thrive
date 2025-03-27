@@ -273,39 +273,39 @@ const MentorshipDetail = () => {
   };
 
   // Mentor profile
-  const renderMentorProfile = () => {
-    if (!program) return null;
+  // const renderMentorProfile = () => {
+  //   if (!program) return null;
 
-    return (
-      <Card 
-        title="Program Mentor" 
-        className="mb-6"
-        extra={<Rate disabled value={program.rating || 0} />}
-      >
-        <div className="text-center">
-          <Image 
-            width={150} 
-            height={150} 
-            src={program.imagePath || '/default-avatar.png'}
-            fallback="/default-avatar.png"
-            preview={false}
-            className="mb-4 rounded-full object-cover mx-auto"
-            alt={program.instructor || 'Mentor'}
-          />
-          <Title level={4} className="mb-2">
-            {program.instructor || 'Unnamed Mentor'}
-          </Title>
-          <Text type="secondary">
-            {program.mentorTitle || "Professional Mentor"}
-          </Text>
-          <Paragraph className="mt-4" type="secondary">
-            {program.mentorBio || "An experienced mentor dedicated to helping professionals grow."}
-          </Paragraph>
+  //   return (
+  //     <Card 
+  //       title="Program Mentor" 
+  //       className="mb-6"
+  //       extra={<Rate disabled value={program.rating || 0} />}
+  //     >
+  //       <div className="text-center">
+  //         <Image 
+  //           width={150} 
+  //           height={150} 
+  //           src={program.imagePath || '/default-avatar.png'}
+  //           fallback="/default-avatar.png"
+  //           preview={false}
+  //           className="mb-4 rounded-full object-cover mx-auto"
+  //           alt={program.instructor || 'Mentor'}
+  //         />
+  //         <Title level={4} className="mb-2">
+  //           {program.instructor || 'Unnamed Mentor'}
+  //         </Title>
+  //         <Text type="secondary">
+  //           {program.mentorTitle || "Professional Mentor"}
+  //         </Text>
+  //         <Paragraph className="mt-4" type="secondary">
+  //           {program.mentorBio || "An experienced mentor dedicated to helping professionals grow."}
+  //         </Paragraph>
           
-        </div>
-      </Card>
-    );
-  };
+  //       </div>
+  //     </Card>
+  //   );
+  // };
 
   // Related programs
   const renderRelatedPrograms = () => {
@@ -397,69 +397,6 @@ const MentorshipDetail = () => {
   };
 
   // Application Modal
-  const ApplicationModal = () => {
-    const handleSubmit = async () => {
-      try {
-        // Implement application submission logic
-        await axios.post(`${API_BASE_URL}/applications`, {
-          programId: id,
-          ...applicationForm
-        });
-        message.success('Application submitted successfully!');
-        setApplyModalVisible(false);
-      } catch (error) {
-        message.error('Failed to submit application');
-        console.error(error);
-      }
-    };
-
-    return (
-      <Modal
-        title="Apply to Mentorship Program"
-        visible={applyModalVisible}
-        onOk={handleSubmit}
-        onCancel={() => setApplyModalVisible(false)}
-        okText="Submit Application"
-      >
-        <div className="space-y-4">
-          <div>
-            <Text strong>Motivation</Text>
-            <TextArea 
-              rows={4} 
-              placeholder="Why are you interested in this mentorship program?"
-              value={applicationForm.motivation}
-              onChange={(e) => setApplicationForm({
-                ...applicationForm, 
-                motivation: e.target.value
-              })}
-            />
-          </div>
-          <div>
-            <Text strong>Relevant Skills</Text>
-            <TextArea 
-              rows={4} 
-              placeholder="Describe your relevant skills and experience"
-              value={applicationForm.skills}
-              onChange={(e) => setApplicationForm({
-                ...applicationForm, 
-                skills: e.target.value
-              })}
-            />
-          </div>
-          <div>
-            <Text strong>Resume/CV</Text>
-            <Input 
-              type="file" 
-              onChange={(e) => setApplicationForm({
-                ...applicationForm, 
-                resumeFile: e.target.files[0]
-              })}
-            />
-          </div>
-        </div>
-      </Modal>
-    );
-  };
 
   // Main render
   return (
@@ -469,16 +406,13 @@ const MentorshipDetail = () => {
           <Skeleton active />
         ) : program ? (
           <Row gutter={[24, 24]}>
-            <Col xs={24} lg={16}>
+            <Col >
               {renderKeyInformation()}
               {renderSkillRequirements()}
               {renderProfessionalNetworks()}
               {renderRecommendedResources()}
             </Col>
-            <Col xs={24} lg={8}>
-              {renderMentorProfile()}
-              {renderRelatedPrograms()}
-            </Col>
+            
           </Row>
         ) : (
           <div className="text-center">
@@ -498,3 +432,4 @@ const MentorshipDetail = () => {
 };
 
 export default MentorshipDetail;
+

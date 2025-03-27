@@ -76,57 +76,10 @@ const MentorSidebar = () => {
             {!collapsed && <span className="ml-3">careers</span>}
           </NavLink>
           
-          <NavLink 
-            to="/dashboard/mentor/resources" 
-            className={({isActive}) => 
-              `flex items-center py-2.5 px-4 rounded transition duration-200 ${isActive ? 'bg-blue-600' : 'hover:bg-gray-700'} mb-1`
-            }
-          >
-            <ReadOutlined />
-            {!collapsed && <span className="ml-3">Resources</span>}
-          </NavLink>
+        
+         
           
-          <NavLink 
-            to="/dashboard/mentor/messages" 
-            className={({isActive}) => 
-              `flex items-center py-2.5 px-4 rounded transition duration-200 ${isActive ? 'bg-blue-600' : 'hover:bg-gray-700'} mb-1`
-            }
-          >
-            <MessageOutlined />
-            {!collapsed && <span className="ml-3">Messages</span>}
-          </NavLink>
-          
-          <NavLink 
-            to="/dashboard/mentor/reports" 
-            className={({isActive}) => 
-              `flex items-center py-2.5 px-4 rounded transition duration-200 ${isActive ? 'bg-blue-600' : 'hover:bg-gray-700'} mb-1`
-            }
-          >
-            <BarChartOutlined />
-            {!collapsed && <span className="ml-3">Reports</span>}
-          </NavLink>
-          
-          <NavLink 
-            to="/dashboard/mentor/documents" 
-            className={({isActive}) => 
-              `flex items-center py-2.5 px-4 rounded transition duration-200 ${isActive ? 'bg-blue-600' : 'hover:bg-gray-700'} mb-1`
-            }
-          >
-            <FileTextOutlined />
-            {!collapsed && <span className="ml-3">Documents</span>}
-          </NavLink>
-          
-          <div className="border-t border-gray-700 my-4"></div>
-          
-          <NavLink 
-            to="/dashboard/mentor/settings" 
-            className={({isActive}) => 
-              `flex items-center py-2.5 px-4 rounded transition duration-200 ${isActive ? 'bg-blue-600' : 'hover:bg-gray-700'} mb-1`
-            }
-          >
-            <SettingOutlined />
-            {!collapsed && <span className="ml-3">Settings</span>}
-          </NavLink>
+         
         </nav>
       </div>
       

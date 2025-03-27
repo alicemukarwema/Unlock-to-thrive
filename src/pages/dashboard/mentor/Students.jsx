@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Table, Tag, Button, message, Select, Space } from 'antd';
+import { Card, Table, Tag, Button, message, Space } from 'antd';
 import axios from 'axios';
 
 const API_BASE_URL = 'https://unlock-to-thrive-backend.onrender.com/api';
@@ -12,51 +12,56 @@ const api = axios.create({
 
 const MentorDashboard = () => {
   const [applications, setApplications] = useState([]);
-  const [selectedCareer, setSelectedCareer] = useState(null);
-  const [careers, setCareers] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // Fetch available careers and student applications
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const careerResponse = await api.get('/careers');
-        setCareers(careerResponse.data.careers || []);
-      } catch (error) {
-        message.error('Failed to fetch careers');
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
+  const mentorId = localStorage.getItem('userId'); // Assuming mentorId is stored as 'mentorId'
 
-  // Fetch applications when career is selected
   useEffect(() => {
     const fetchApplications = async () => {
-      if (!selectedCareer) return;
-      
+      if (!mentorId) {
+        message.error('Mentor ID not found in localStorage');
+        return;
+      }
+
       setLoading(true);
       try {
-        const response = await api.get(`/mentors/applications/${selectedCareer}`);
+        // Send mentorId as part of the URL
+        const response = await api.get(`/mentors/applications/${mentorId}`);
         setApplications(response.data.data || []);
-        setLoading(false);
       } catch (error) {
         message.error('Failed to fetch applications');
         console.error(error);
+      } finally {
         setLoading(false);
       }
     };
-    fetchApplications();
-  }, [selectedCareer]);
 
-  // Handle application status update
+    fetchApplications();
+  }, [mentorId]);
+
   const handleStatusUpdate = async (studentId, status) => {
+    if (!mentorId) {
+      message.error('Mentor ID not found in localStorage');
+      return;
+    }
+
     try {
-      await api.put(`/mentors/applications/${studentId}/${selectedCareer}`, { status });
+      await api.put(`/mentors/applications/${studentId}`, 
+        { status },
+        {
+          headers: {
+            'Authorization': `Bearer ${mentorId}`,  // If you're using JWT, replace with your actual token logic
+          },
+        }
+      );
       message.success(`Application ${status} successfully`);
-      
+
       // Refresh applications
-      const response = await api.get(`/mentors/applications/${selectedCareer}`);
+      const response = await api.get(`/mentors/applications`, {
+        headers: {
+          'Authorization': `Bearer ${mentorId}`,
+        },
+      });
       setApplications(response.data.data || []);
     } catch (error) {
       message.error('Failed to update application status');
@@ -69,19 +74,19 @@ const MentorDashboard = () => {
       title: 'Student Name',
       dataIndex: ['student', 'fullName'],
       key: 'studentName',
-      render: (name) => name || 'N/A'
+      render: (name) => name || 'N/A',
     },
     {
       title: 'Email',
       dataIndex: ['student', 'email'],
       key: 'email',
-      render: (email) => email || 'N/A'
+      render: (email) => email || 'N/A',
     },
     {
       title: 'Applied Date',
       dataIndex: 'appliedDate',
       key: 'appliedDate',
-      render: (date) => date ? new Date(date).toLocaleDateString() : 'N/A'
+      render: (date) => date ? new Date(date).toLocaleDateString() : 'N/A',
     },
     {
       title: 'Status',
@@ -91,14 +96,10 @@ const MentorDashboard = () => {
         const statusColors = {
           pending: 'orange',
           approved: 'green',
-          rejected: 'red'
+          rejected: 'red',
         };
-        return (
-          <Tag color={statusColors[status] || 'default'}>
-            {status ? status.toUpperCase() : 'PENDING'}
-          </Tag>
-        );
-      }
+        return <Tag color={statusColors[status] || 'default'}>{status ? status.toUpperCase() : 'PENDING'}</Tag>;
+      },
     },
     {
       title: 'Actions',
@@ -120,41 +121,27 @@ const MentorDashboard = () => {
             Reject
           </Button>
         </Space>
-      )
-    }
+      ),
+    },
   ];
 
   return (
     <Card 
       title="Mentor Dashboard" 
       style={{ 
-        backgroundColor: '#6a5acd', 
+        backgroundColor: 'white', 
         color: 'white', 
         minHeight: '100vh' 
       }}
     >
-      <Select
-        placeholder="Select Career Program"
-        style={{ width: '100%', marginBottom: 16 }}
-        onChange={(value) => setSelectedCareer(value)}
-      >
-        {careers.map(career => (
-          <Option key={career._id} value={career._id}>
-            {career.title}
-          </Option>
-        ))}
-      </Select>
-
       <Table 
         columns={columns}
         dataSource={applications}
         loading={loading}
-        rowKey={(record) => record.studentId || Math.random()}
+        rowKey={(record) => record.studentId}
         style={{ backgroundColor: 'white' }}
         locale={{
-          emptyText: selectedCareer 
-            ? 'No applications found for this career' 
-            : 'Please select a career program'
+          emptyText: 'No applications found for this mentor',
         }}
       />
     </Card>
