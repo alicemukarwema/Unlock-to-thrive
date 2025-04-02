@@ -8,7 +8,7 @@ const RequestResetPassword = () => {
   const handleSubmit = async (values) => {
     setLoading(true);
     try {
-      const response = await axios.post('https://unlock-to-thrive-backend.onrender.com/api/request-reset-password', values);
+      const response = await axios.post('http://localhost:5000/api/request-reset-password', values);
       message.success(response.data.message);
     } catch (error) {
       message.error(error.response?.data?.message || 'Failed to send reset request.');

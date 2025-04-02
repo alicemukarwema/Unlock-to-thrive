@@ -20,7 +20,7 @@ const ApplicationModal = ({ visible, onClose, mentorId }) => {
         formData.append('resume', applicationForm.resumeFile);
       }
 
-      await axios.post('https://unlock-to-thrive-backend.onrender.com/api/students/apply', formData);
+      await axios.post('http://localhost:5000/api/students/apply', formData);
       message.success('Application submitted successfully!');
       onClose();
     } catch (error) {
@@ -257,7 +257,7 @@ const MentorList = () => {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const response = await axios.get('https://unlock-to-thrive-backend.onrender.com/api/mentors');
+        const response = await axios.get('http://localhost:5000/api/mentors');
         if (response.data && response.data.data) {
           setMentors(response.data.data);
         }

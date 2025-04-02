@@ -15,7 +15,7 @@ const { TextArea } = Input;
 const { Title, Text } = Typography;
 const { TabPane } = Tabs;
 
-const API_URL = 'https://unlock-to-thrive-backend.onrender.com/api/careers';
+const API_URL = 'http://localhost:5000/api/careers';
 
 const MentorshipDashboard = () => {
   // State variables

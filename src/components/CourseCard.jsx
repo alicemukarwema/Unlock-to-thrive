@@ -44,7 +44,7 @@ const CourseCard = ({ course }) => {
     }
 
     // Otherwise, it's a relative path that needs the backend URL
-    return `https://unlock-to-thrive-backend.onrender.com/api${path}`;
+    return `http://localhost:5000/api${path}`;
   };
 
   const handleCardClick = () => {
