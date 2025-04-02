@@ -12,7 +12,7 @@ const LoginPage = ({ onLogin }) => {
     try {
       console.log("Submitting login request with:", values);
 
-      const response = await axios.post('http://localhost:5000/api/signin', values);
+      const response = await axios.post('https://unlock-to-thrive-backend.onrender.com/api/signin', values);
       
       if (response.status === 200) {
         const { token, user } = response.data;

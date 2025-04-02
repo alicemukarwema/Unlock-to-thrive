@@ -29,8 +29,8 @@ const CareersPage = () => {
     const fetchMetadata = async () => {
       // try {
       //   const [categoriesRes, levelsRes] = await Promise.all([
-      //     axios.get('http://localhost:5000/api/careers/meta/categories'),
-      //     axios.get('http://localhost:5000/api/careers/meta/levels')
+      //     axios.get('https://unlock-to-thrive-backend.onrender.com/api/careers/meta/categories'),
+      //     axios.get('https://unlock-to-thrive-backend.onrender.com/api/careers/meta/levels')
       //   ]);
         
       //   setCategories(categoriesRes.data);
@@ -52,7 +52,7 @@ const CareersPage = () => {
       setError(null);
       
       try {
-        const response = await axios.get('http://localhost:5000/api/careers', {
+        const response = await axios.get('https://unlock-to-thrive-backend.onrender.com/api/careers', {
           params: {
             page: currentPage,
             limit: pageSize,
